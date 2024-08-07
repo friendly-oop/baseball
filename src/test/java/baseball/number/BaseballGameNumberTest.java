@@ -7,15 +7,16 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
-class BaseballNumberTest {
+class BaseballGameNumberTest {
     @ParameterizedTest
     @ValueSource(strings = {"12", "1234"})
     @DisplayName("문자열이 세글자가 아니면 예외를 던진다.")
     void of_test1(String input) {
-        assertThatThrownBy(() -> BaseballNumber.of(input))
-                .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining("세 글자를 입력해야 합니다.");
+        assertThatThrownBy(() -> BaseballGameNumber.of(input))
+            .isInstanceOf(IllegalArgumentException.class)
+            .hasMessageContaining("세 글자를 입력해야 합니다.");
     }
 
     @Test
@@ -23,8 +24,11 @@ class BaseballNumberTest {
     void of_test2() {
         String input = "123";
 
-        BaseballNumber baseballNumber = BaseballNumber.of(input);
+        BaseballGameNumber baseballGameNumber = BaseballGameNumber.of(input);
 
-        assertThat(baseballNumber.getClass()).isEqualTo(BaseballNumber.class);
+        assertAll(
+            () -> assertThat(baseballGameNumber.getClass()).isEqualTo(BaseballGameNumber.class),
+            () -> assertThat(baseballGameNumber.number.size()).isEqualTo(3)
+        );
     }
 }
