@@ -1,5 +1,6 @@
-package baseball.number;
+package baseball.game.number;
 
+import baseball.game.number.BaseballGameNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;

@@ -1,4 +1,4 @@
-package baseball.number;
+package baseball.game.number;
 
 public enum FinishNumber {
     NEW_GAME_NUMBER(1),
