@@ -28,7 +28,28 @@ public class Digit {
         return digit;
     }
 
-    public boolean check(int number) {
-        return this.number == number;
+    public boolean check(Digit digit) {
+        return this.number == digit.number;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Digit digit = (Digit) o;
+        return digit.number == number;
+    }
+
+    @Override
+    public int hashCode() {
+        return Integer.hashCode(number);
     }
 }
