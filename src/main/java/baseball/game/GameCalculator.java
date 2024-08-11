@@ -36,13 +36,13 @@ public class GameCalculator {
         List<Digit> computerNumber = computer.getNumber();
         List<Digit> playerNumber = player.getNumber();
 
-        if (!isEqualsNumber(computerNumber, playerNumber, FIRST_NUMBER_INDEX) && computerNumber.containsAll(playerNumber)) {
+        if (!isEqualsNumber(computerNumber, playerNumber, FIRST_NUMBER_INDEX) && computerNumber.contains(playerNumber.get(FIRST_NUMBER_INDEX))) {
             ballCount++;
         }
-        if (!isEqualsNumber(computerNumber, playerNumber, SECOND_NUMBER_INDEX) && computerNumber.containsAll(playerNumber)) {
+        if (!isEqualsNumber(computerNumber, playerNumber, SECOND_NUMBER_INDEX) && computerNumber.contains(playerNumber.get(SECOND_NUMBER_INDEX))) {
             ballCount++;
         }
-        if (!isEqualsNumber(computerNumber, playerNumber, THIRD_NUMBER_INDEX) && computerNumber.containsAll(playerNumber)) {
+        if (!isEqualsNumber(computerNumber, playerNumber, THIRD_NUMBER_INDEX) && computerNumber.contains(playerNumber.get(THIRD_NUMBER_INDEX))) {
             ballCount++;
         }
 
