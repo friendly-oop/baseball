@@ -3,10 +3,14 @@ package baseball.game;
 import baseball.game.number.BaseballNumber;
 
 public class GameResult {
+    private final String BALL = "볼 ";
+    private final String STRIKE = "스트라이크";
+    private final String NOTHING = "낫싱";
+
     private int ballCount;
     private int strikeCount;
 
-    private GameResult(int strikeCount, int ballCount) {
+    private GameResult(int ballCount, int strikeCount) {
         this.strikeCount = strikeCount;
         this.ballCount = ballCount;
     }
@@ -18,6 +22,13 @@ public class GameResult {
     }
 
     public String getGameResult() {
-        return this.ballCount + "볼 " + this.strikeCount + "스트라이크";
+        if (ballCount == 0 && strikeCount == 0) {
+            return NOTHING;
+        }
+        return this.ballCount + BALL + this.strikeCount + STRIKE;
+    }
+
+    public boolean isStrikeOut() {
+        return this.strikeCount == 3;
     }
 }
