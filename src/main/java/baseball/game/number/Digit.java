@@ -1,5 +1,7 @@
 package baseball.game.number;
 
+import java.util.Objects;
+
 public class Digit {
     private Digit() {
     }
@@ -45,11 +47,11 @@ public class Digit {
             return false;
         }
         Digit digit = (Digit) o;
-        return digit.number == number;
+        return digit.number == this.number;
     }
 
     @Override
     public int hashCode() {
-        return Integer.hashCode(number);
+        return Objects.hashCode(number);
     }
 }

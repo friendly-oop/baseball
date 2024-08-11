@@ -1,7 +1,7 @@
 package baseball.game;
 
-import baseball.number.BaseballGameNumber;
-import baseball.number.FinishNumber;
+import baseball.game.number.BaseballGameNumber;
+import baseball.game.number.FinishNumber;
 import camp.nextstep.edu.missionutils.Console;
 
 public class GameScanner {
