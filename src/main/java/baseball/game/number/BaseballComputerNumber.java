@@ -4,11 +4,11 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.LinkedHashSet;
 
-public class BaseballComputerNumber extends BaseballNumber {
-    private static final int MAX_INPUT_LENGTH = 3;
-    private static final int MIN_NUMBER_RANGE = 1;
-    private static final int MAX_NUMBER_RANGE = 9;
+import static baseball.Constant.MAX_INPUT_LENGTH;
+import static baseball.Constant.MAX_NUMBER_RANGE;
+import static baseball.Constant.MIN_NUMBER_RANGE;
 
+public class BaseballComputerNumber extends BaseballNumber {
     public BaseballComputerNumber() {
         this.number = new LinkedHashSet<>();
         while (number.size() != MAX_INPUT_LENGTH) {

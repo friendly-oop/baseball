@@ -5,11 +5,11 @@ import baseball.game.number.Digit;
 
 import java.util.List;
 
-public class GameCalculator {
-    private static final int FIRST_NUMBER_INDEX = 0;
-    private static final int SECOND_NUMBER_INDEX = 1;
-    private static final int THIRD_NUMBER_INDEX = 2;
+import static baseball.Constant.FIRST_NUMBER_INDEX;
+import static baseball.Constant.SECOND_NUMBER_INDEX;
+import static baseball.Constant.THIRD_NUMBER_INDEX;
 
+public class GameCalculator {
     public static int countStrike(BaseballNumber computer, BaseballNumber player) {
         int strikeCount = 0;
         List<Digit> computerNumber = computer.getNumber();
