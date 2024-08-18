@@ -18,7 +18,7 @@ class GameCalculatorTest {
         String computerNumber = baseballComputerNumber.getNumber().stream()
             .map(number -> String.valueOf(number.getNumber()))
             .collect(Collectors.joining(""));
-        BaseballNumber baseballGameNumber = BaseballGameNumber.of(computerNumber);
+        BaseballNumber baseballGameNumber = BaseballGameNumber.from(computerNumber);
 
         assertThat(GameCalculator.countStrike(baseballComputerNumber, baseballGameNumber)).isEqualTo(3);
     }
@@ -30,7 +30,7 @@ class GameCalculatorTest {
         String computerNumber = baseballComputerNumber.getNumber().stream()
             .map(number -> String.valueOf(number.getNumber()))
             .collect(Collectors.joining(""));
-        BaseballNumber baseballGameNumber = BaseballGameNumber.of(swapFirstAndLast(computerNumber));
+        BaseballNumber baseballGameNumber = BaseballGameNumber.from(swapFirstAndLast(computerNumber));
 
         assertThat(GameCalculator.countBall(baseballComputerNumber, baseballGameNumber)).isEqualTo(3);
     }

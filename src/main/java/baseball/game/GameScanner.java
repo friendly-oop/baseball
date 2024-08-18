@@ -9,11 +9,11 @@ public class GameScanner {
 
     public static BaseballGameNumber scanBaseballGameNumber() {
         String input = Console.readLine();
-        return BaseballGameNumber.of(input);
+        return BaseballGameNumber.from(input);
     }
 
     public static FinishNumber scanFinishNumber() {
         String input = Console.readLine();
-        return FinishNumber.of(input);
+        return FinishNumber.from(input);
     }
 }

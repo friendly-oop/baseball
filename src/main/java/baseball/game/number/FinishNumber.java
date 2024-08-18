@@ -10,7 +10,7 @@ public enum FinishNumber {
         this.number = number;
     }
 
-    public static FinishNumber of(String input) {
+    public static FinishNumber from(String input) {
         switch (input) {
             case "1":
                 return NEW_GAME_NUMBER;

@@ -8,7 +8,7 @@ public class Digit {
 
     private int number;
 
-    public static Digit of(char ch) {
+    public static Digit from(char ch) {
         if (ch < '1' || ch > '9') {
             throw new IllegalArgumentException("숫자[1-9]를 입력해야 합니다.");
         }
@@ -19,7 +19,7 @@ public class Digit {
         return digit;
     }
 
-    public static Digit of(int num) {
+    public static Digit from(int num) {
         if (num < 1 || num > 9) {
             throw new IllegalArgumentException("숫자[1-9]를 입력해야 합니다.");
         }
