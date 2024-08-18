@@ -6,11 +6,13 @@ import baseball.game.number.FinishNumber;
 
 public class BaseballGame {
     private final GamePrinter printer;
+    private final GameCalculator calculator;
     private BaseballNumber computer;
     private FinishNumber finishNumber;
 
     public BaseballGame() {
         printer = new GamePrinter();
+        calculator = new GameCalculator();
         finishNumber = FinishNumber.NEW_GAME_NUMBER;
     }
 
@@ -24,7 +26,7 @@ public class BaseballGame {
             printer.printInputMessage();
             BaseballNumber player = GameScanner.scanBaseballGameNumber();
 
-            GameResult result = GameResult.makeGameResult(computer, player);
+            GameResult result = calculator.makeGameResult(computer, player);
             printer.printScoreMessage(result);
             if(result.isStrikeOut()) {
                 break;

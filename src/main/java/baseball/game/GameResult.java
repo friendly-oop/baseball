@@ -10,15 +10,9 @@ public class GameResult {
     private int ballCount;
     private int strikeCount;
 
-    private GameResult(int ballCount, int strikeCount) {
-        this.strikeCount = strikeCount;
+    public GameResult(int ballCount, int strikeCount) {
         this.ballCount = ballCount;
-    }
-
-    public static GameResult makeGameResult(BaseballNumber computer, BaseballNumber player) {
-        int ballCount = GameCalculator.countBall(computer, player);
-        int strikeCount = GameCalculator.countStrike(computer, player);
-        return new GameResult(ballCount, strikeCount);
+        this.strikeCount = strikeCount;
     }
 
     public String getGameResult() {

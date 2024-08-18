@@ -10,7 +10,13 @@ public class GameCalculator {
     private static final int SECOND_NUMBER_INDEX = 1;
     private static final int THIRD_NUMBER_INDEX = 2;
 
-    public static int countStrike(BaseballNumber computer, BaseballNumber player) {
+    public GameResult makeGameResult(BaseballNumber computer, BaseballNumber player) {
+        int ballCount = countBall(computer, player);
+        int strikeCount = countStrike(computer, player);
+        return new GameResult(ballCount, strikeCount);
+    }
+
+    private int countStrike(BaseballNumber computer, BaseballNumber player) {
         int strikeCount = 0;
         List<Digit> computerNumber = computer.getNumber();
         List<Digit> playerNumber = player.getNumber();
@@ -27,11 +33,11 @@ public class GameCalculator {
         return strikeCount;
     }
 
-    private static boolean isEqualsNumber(List<Digit> computerNumber, List<Digit> playerNumber, int index) {
+    private boolean isEqualsNumber(List<Digit> computerNumber, List<Digit> playerNumber, int index) {
         return computerNumber.get(index).check(playerNumber.get(index));
     }
 
-    public static int countBall(BaseballNumber computer, BaseballNumber player) {
+    private int countBall(BaseballNumber computer, BaseballNumber player) {
         int ballCount = 0;
         List<Digit> computerNumber = computer.getNumber();
         List<Digit> playerNumber = player.getNumber();
