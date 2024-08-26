@@ -1,4 +1,4 @@
-package baseball.game.number;
+package baseball.model;
 
 public enum FinishNumber {
     NEW_GAME_NUMBER(1),

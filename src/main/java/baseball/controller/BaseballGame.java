@@ -1,8 +1,11 @@
-package baseball.game;
+package baseball.controller;
 
-import baseball.game.number.BaseballComputerNumber;
-import baseball.game.number.BaseballNumber;
-import baseball.game.number.FinishNumber;
+import baseball.model.BaseballComputerNumber;
+import baseball.model.BaseballNumber;
+import baseball.model.FinishNumber;
+import baseball.model.GameResult;
+import baseball.view.GamePrinter;
+import baseball.view.GameScanner;
 
 public class BaseballGame {
     private final GamePrinter printer;

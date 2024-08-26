@@ -1,8 +1,8 @@
-package baseball.game;
+package baseball.controller;
 
-import baseball.game.number.BaseballComputerNumber;
-import baseball.game.number.BaseballGameNumber;
-import baseball.game.number.BaseballNumber;
+import baseball.model.BaseballComputerNumber;
+import baseball.model.BaseballGameNumber;
+import baseball.model.BaseballNumber;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

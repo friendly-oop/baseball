@@ -1,7 +1,7 @@
-package baseball.game;
+package baseball.controller;
 
-import baseball.game.number.BaseballNumber;
-import baseball.game.number.Digit;
+import baseball.model.BaseballNumber;
+import baseball.model.Digit;
 
 import java.util.List;
 

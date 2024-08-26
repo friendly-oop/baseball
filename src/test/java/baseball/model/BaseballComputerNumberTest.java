@@ -1,7 +1,5 @@
-package baseball.game.number;
+package baseball.model;
 
-import baseball.game.number.BaseballComputerNumber;
-import baseball.game.number.Digit;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

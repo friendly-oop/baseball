@@ -1,6 +1,6 @@
-package baseball.game;
+package baseball.model;
 
-import baseball.game.number.BaseballNumber;
+import baseball.controller.GameCalculator;
 
 public class GameResult {
     private final String BALL = "볼 ";
